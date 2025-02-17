@@ -1,0 +1,29 @@
+@use "/src/styles/partials/global";
+@use "/src/styles/partials/mixins" as *;
+@use "/src/styles/partials/variable" as *;
+
+
+.header {
+    background-color: $pistachio;
+    padding-left: 16px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+
+
+    h1 {
+        padding-bottom: 24px;
+        font-size: 32px;
+        font-weight: 400;
+
+        @include tablet {
+            font-size: 40px;
+            font-weight: 400;
+        }
+
+        @include desktop {
+            font-size: 40px;
+            font-weight: 400;
+        }
+
+    }
+}

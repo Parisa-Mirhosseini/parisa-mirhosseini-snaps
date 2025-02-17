@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Tag from "../Tag/Tag";
-import "../PhotoCard.scss";
+import "./PhotoCard.scss";
 
 function PhotoCard({ photo, setGlobalCounter }) {
   console.log(photo.photographer);

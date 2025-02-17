@@ -1,0 +1,17 @@
+@use "/src/styles/partials/global";
+@use "/src/styles/partials/mixins" as *;
+@use "/src/styles/partials/variable" as *;
+
+.footer {
+    background-color: $pistachio;
+    padding-left: 16px;
+    padding-top: 24px;
+    padding-bottom: 48px;
+
+
+    h1 {
+        padding-bottom: 24px;
+        font-size: 32px;
+        font-weight: 400;
+    }
+}
