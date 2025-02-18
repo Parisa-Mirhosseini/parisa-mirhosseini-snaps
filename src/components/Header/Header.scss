@@ -1,6 +1,7 @@
 @use "/src/styles/partials/global";
 @use "/src/styles/partials/mixins" as *;
 @use "/src/styles/partials/variable" as *;
+@use "/src/styles/partials/typography";
 
 
 .header {
@@ -9,12 +10,22 @@
     padding-top: 24px;
     padding-bottom: 48px;
 
+    &__text {
+        color: $black;
+        font-family: "Newsreader";
+        font-size: 26px;
+        font-weight: 100;
+        padding-top: 20px;
+        line-height: 38px;
+        font-style: italic;
+    }
 
     h1 {
         padding-bottom: 24px;
         font-size: 32px;
-        font-weight: 400;
+
         line-height: 32px;
+        font-weight: 400;
 
         @include tablet {
             font-size: 40px;
@@ -26,5 +37,24 @@
             font-weight: 400;
         }
 
+
     }
+}
+
+h5 {
+    font-family: "Outfit";
+    font-size: 12px;
+    font-weight: 300;
+    padding-top: 50px;
+}
+
+
+h2 {
+    color: $black;
+    font-family: "Newsreader";
+    font-size: 26px;
+    font-weight: 100;
+    padding-top: 20px;
+    line-height: 38px;
+
 }

@@ -21,8 +21,8 @@ function Header() {
                         {drawerOpen ? "Close" : "Open"} drawer
                     </button>
                 </div>
-                <h4>Our mission</h4>
-                <h4>Provide photographers a space to share photos of the neighborhoods they cherish, expressed in their unique style.</h4>
+                <h5>Our mission</h5>
+                <h2>Provide photographers a space to share photos of the neighborhoods they cherish, <span className="header__text">expressed in their unique style.</span></h2>
             </div>
 
         </>);
