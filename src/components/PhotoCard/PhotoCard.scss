@@ -1,17 +1,21 @@
+@use "/src/styles/partials/global";
+@use "/src/styles/partials/mixins" as *;
+@use "/src/styles/partials/variable" as *;
+@use "/src/styles/partials/typography";
+
 .photo {
     width: 28.5rem;
-    border: 5px solid coral;
-    border-radius: 4px;
-    padding: 1rem;
+    border: 2px solid $seagreen;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
+    background: $sage;
+
 
     &__content {
         position: relative;
         display: flex;
-        border: 3px solid lightgreen;
-        border-radius: 10px;
         overflow: hidden;
     }
 
@@ -20,16 +24,26 @@
     }
 
     &__photographer {
+        font-family: "outfit";
         position: absolute;
-        background-color: lightgreen;
+        background-color: $sage;
         border-top-left-radius: 10px;
-        padding: 0.2rem;
+        padding: 0.5rem;
         right: 0;
         bottom: 0;
+        font-size: 12px;
+        font-weight: 300;
+        
+        @include tablet{
+            font-size: 18px;
+        font-weight: 300;
+        }
     }
 
     &__tags {
+        font-family: "outfit";
         display: flex;
-        gap: 0.1rem;
+        gap: 0.5rem;
+        padding-left: 8px;
     }
 }

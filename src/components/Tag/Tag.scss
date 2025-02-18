@@ -1,16 +1,30 @@
+@use "/src/styles/partials/global";
+@use "/src/styles/partials/mixins" as *;
+@use "/src/styles/partials/variable" as *;
+@use "/src/styles/partials/typography";
+
+
+
 .tag {
-    background-color: lightgreen;
-  
-    &--clickable {
-      cursor: pointer;
-      &:hover {
-        background-color: green;
-      }
-    }
-  
-    &--selected {
-      background-color: darkgreen;
-      color: whitesmoke;
+  background-color: $white;
+  border: 1px solid $seagreen;
+  border-radius: 10px;
+  gap: 20px;
+  padding-top: 8px;
+  padding: 8px;
+  font-family: "outfit";
+
+
+  &--clickable {
+    cursor: pointer;
+
+    &:hover {
+      background-color: green;
     }
   }
-  
+
+  &--selected {
+    background-color: darkgreen;
+    color: whitesmoke;
+  }
+}

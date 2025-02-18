@@ -1,17 +1,71 @@
 @use "/src/styles/partials/global";
 @use "/src/styles/partials/mixins" as *;
 @use "/src/styles/partials/variable" as *;
+@use "/src/styles/partials/typography";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .footer {
     background-color: $pistachio;
     padding-left: 16px;
     padding-top: 24px;
     padding-bottom: 48px;
-
+    
 
     h1 {
         padding-bottom: 24px;
         font-size: 32px;
         font-weight: 400;
+        line-height: 32px;
+        color: $black;
+    }
+
+    h4 {
+        font-family: 'Outfit', sans-serif;
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: 500;
+        padding-bottom: 8px;
+        color: $black;
+    }
+
+    &--inspiration {
+        padding-bottom: 32px;
+    }
+
+
+
+    &__bottom--socials {
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 10px;
+
+    }
+
+    &__bottom--copyright {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 50px;
+        font-family: 'Outfit';
+        font-size: 10px;
+        line-height: 12px;
+        font-weight: 500;
+        color: $seagreen;
+
+        @include tablet {
+            font-size: 12px;
+            line-height: 15px;
+            font-weight: 500;
+            justify-content:baseline;
+        }
+
     }
 }
