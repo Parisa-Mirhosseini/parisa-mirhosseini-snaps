@@ -7,6 +7,7 @@ import "./App.scss";
 import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import FilterDrawer from "./components/FilterDrawer/FilterDrawer.jsx";
+import OurMission from "./components/OurMission/OurMission.jsx"
 
 function App() {
     const [selectedTag, setSelectedTag] = useState(photos);
@@ -23,8 +24,10 @@ function App() {
         <div className="app">
             <Header setDrawerOpen={setDrawerOpen} />
             {DrawerOpen ? <FilterDrawer handleTagClick={handleTagClick} /> : ''}
+            <OurMission />
             <div className="photo-list">
                 {selectedTag.map((photo) => <PhotoCard photo={photo} key={photo.id} />)}
+                
             </div>
 
             <Footer />

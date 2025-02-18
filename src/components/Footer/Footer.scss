@@ -14,8 +14,17 @@
 .footer {
     background-color: $pistachio;
     padding-left: 16px;
-    padding-top: 24px;
+    padding-top: 50px;
     padding-bottom: 48px;
+    
+    @include desktop{
+        padding-top: 50px;
+padding-left: 24px;
+display: flex;
+flex-direction: column;
+
+    }
+
     
     &__column{
 display: flex;

@@ -4,52 +4,18 @@
 @use "/src/styles/partials/typography";
 
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    justify-content: baseline;
-    gap: 6.5rem;
-    background-color: $pistachio;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+
+.ourmission {
+    background-color: $pistachio;
+    padding-left: 16px;
     padding-top: 24px;
     padding-bottom: 48px;
-
-
-
-    &__filter {
-        font-size: 18px;
-        color: $forestgreen;
-        background-color: $white;
-        border: 2px solid $forestgreen;
-        border-radius: 30px;
-        padding-top: 11px;
-        padding-bottom: 11px;
-        padding-right: 22px;
-        padding-left: 22px;
-        width: 8rem;
-        @include tablet {
-            padding-right: 22px;
-            padding-left: 22px;
-        }
-
-        @include desktop {
-            padding-right: 22px;
-            padding-left: 22px;
-        }
-
-
-
-        &:hover {
-            background-color: $forestgreen;
-            color: $white;
-            cursor: pointer;
-
-
-        }
-
-        
-
-    }
 
     &__text {
         color: $black;
@@ -73,32 +39,9 @@
             line-height: 66px;
         }
 
-    }
-
-    h1 {
-        font-family: "Newsreader";
-        font-size: 32px;
-        padding-top: 10px;
-        line-height: 32px;
-        font-weight: 400;
-
-        @include tablet {
-            font-size: 40px;
-            line-height: 40px;
-            font-weight: 400;
-            padding-left: 16px;
-        }
-
-        @include desktop {
-            font-size: 40px;
-            line-height: 40px;
-            font-weight: 400;
-            padding-left: 16px;
-        }
-
 
     }
-
+ 
 }
 
 h5 {
@@ -141,6 +84,7 @@ h2 {
         line-height: 66px;
         width: 50%;
     }
-
+  
 
 }
+
