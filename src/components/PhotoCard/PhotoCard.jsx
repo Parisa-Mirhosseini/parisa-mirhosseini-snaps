@@ -3,7 +3,7 @@ import Tag from "../Tag/Tag";
 import "./PhotoCard.scss";
 
 function PhotoCard({ photo, setGlobalCounter }) {
-  console.log(photo.photographer);
+
 
   const [count, setCount] = useState(0);
 

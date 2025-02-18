@@ -18,9 +18,24 @@
         padding-top: 20px;
         line-height: 38px;
         font-style: italic;
+
+        @include tablet {
+            padding-left: 16px;
+            font-size: 52px;
+            font-weight: 100;
+            line-height: 66px;
+        }
+
+        @include desktop {
+            padding-left: 16px;
+            font-size: 52px;
+            line-height: 66px;
+        }
+
     }
 
     h1 {
+        font-family: "Newsreader";
         padding-bottom: 24px;
         font-size: 32px;
 
@@ -29,16 +44,36 @@
 
         @include tablet {
             font-size: 40px;
+            line-height: 40px;
             font-weight: 400;
+            padding-left: 16px;
         }
 
         @include desktop {
             font-size: 40px;
+            line-height: 40px;
             font-weight: 400;
+            padding-left: 16px;
         }
 
 
     }
+    &__tags{
+
+        background-color:$sage;
+        
+        
+        &--button{
+            font-size:18px;
+            color:$forestgreen;
+            background-color: $white;
+            border-radius: 8px;
+        }
+        
+        }
+        &__filter{
+            background-color: $white;
+        }
 }
 
 h5 {
@@ -46,6 +81,17 @@ h5 {
     font-size: 12px;
     font-weight: 300;
     padding-top: 50px;
+
+    @include tablet {
+        padding-left: 16px;
+        font-size: 20px;
+    }
+
+    @include desktop {
+        padding-left: 16px;
+        font-size: 20px;
+    }
+
 }
 
 
@@ -57,4 +103,20 @@ h2 {
     padding-top: 20px;
     line-height: 38px;
 
+    @include tablet {
+        padding-left: 16px;
+        font-size: 52px;
+        font-weight: 100;
+        line-height: 66px;
+    }
+
+    @include desktop {
+        padding-left: 16px;
+        font-size: 52px;
+        line-height: 66px;
+        width: 50%;
+    }
+  
+
 }
+

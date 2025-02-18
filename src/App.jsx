@@ -6,49 +6,27 @@ import photos from "./data/photos.json";
 import "./App.scss";
 import Header from "./components/Header/Header.jsx";
 import Footer from "./components/Footer/Footer.jsx";
+import FilterDrawer from "./components/FilterDrawer/FilterDrawer.jsx";
 
 function App() {
-    console.log("render App comp");
-    const [selectedTag, setSelectedTag] = useState(null);
-    const [count, setCount] = useState(0);
-    const [drawerOpen, setDrawerOpen] = useState(false);
+    const [selectedTag, setSelectedTag] = useState(photos);
+    const [DrawerOpen, setDrawerOpen] = useState(false);
 
-    const filteredPhotos = selectedTag ? photos.filter((photo) => photo.tags.includes(selectedTag)) : photos;
+    const handleTagClick = (tag) => {
+        const filteredPhotos = photos.filter((photo) => photo.tags.includes(tag));
+        setSelectedTag(filteredPhotos);
+    } 
+
+    // const filteredPhotos = selectedTag ? photos.filter((photo) => photo.tags.includes(selectedTag)) : photos;
 
     return (
         <div className="app">
-        <Header />
-            count: {count}
-            <div className="app__content">
-                {/* drawer */}
-                <div className={`drawer ${drawerOpen ? "drawer--open" : ""}`}>
-                    {/* filter list */}
-                    <ul>
-                        {tags.map((tag) => (
-                            <li
-                                key={tag}
-                                onClick={() => {
-                                    if (selectedTag === tag) {
-                                        setSelectedTag(null);
-                                    } else {
-                                        setSelectedTag(tag);
-                                    }
-                                }}
-                            >
-                                <Tag tag={tag} isClickable selectedTag={selectedTag} setCount={setCount} />
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                {/* photo list */}
-                {/* instead of entire array... FILTER to only include items who's 'tags' includes 'selectedTag' */}
-                {/* IF selectedTag is null... show entire array */}
-                <div className="photo-list">
-                    {filteredPhotos.map((photo) => {
-                        return <PhotoCard photo={photo} key={photo.id} setGlobalCounter={setCount} />;
-                    })}
-                </div>
+            <Header setDrawerOpen={setDrawerOpen} />
+            {DrawerOpen ? <FilterDrawer handleTagClick={handleTagClick} /> : ''}
+            <div className="photo-list">
+                {selectedTag.map((photo) => <PhotoCard photo={photo} key={photo.id} />)}
             </div>
+
             <Footer />
         </div>
     );

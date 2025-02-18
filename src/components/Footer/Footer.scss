@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Outfit';
 }
 
 .footer {
@@ -16,8 +17,14 @@
     padding-top: 24px;
     padding-bottom: 48px;
     
+    &__column{
+display: flex;
+flex-direction: column;
+
+    }
 
     h1 {
+        font-family: "Newsreader";
         padding-bottom: 24px;
         font-size: 32px;
         font-weight: 400;
@@ -32,6 +39,16 @@
         font-weight: 500;
         padding-bottom: 8px;
         color: $black;
+        @include tablet{
+            font-size: 20px;
+           
+        }
+
+        @include desktop{
+            font-size: 20px;
+           
+           
+        }
     }
 
     &--inspiration {
@@ -64,8 +81,18 @@
             font-size: 12px;
             line-height: 15px;
             font-weight: 500;
-            justify-content:baseline;
+            justify-content:flex-start;
+            gap: 1rem;
         }
+        @include desktop {
+            font-size: 14px;
+            line-height: 15px;
+            font-weight: 500;
+            justify-content:flex-start;
+            gap: 1rem;
+
+        }
+
 
     }
 }

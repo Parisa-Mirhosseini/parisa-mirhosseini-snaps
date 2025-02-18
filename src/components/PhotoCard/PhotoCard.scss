@@ -48,13 +48,13 @@
         font-weight: 300;
 
         @include tablet {
-            font-size: 18px;
+            font-size: 12px;
             font-weight: 400;
         }
 
         @include desktop {
             font-size: 18px;
-            font-weight: 400;
+            font-weight: 300;
         }
     }
 
@@ -66,12 +66,12 @@
 
         @include tablet {
             font-size: 12px;
-            font-weight: 400;
+            font-weight: 300;
         }
 
         @include desktop {
             font-size: 12px;
-            font-weight: 400;
+            font-weight: 300;
         }
     }
 }

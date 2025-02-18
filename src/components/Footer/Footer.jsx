@@ -11,6 +11,7 @@ function Footer() {
     return (
         <>
             <div className="footer">
+                <div classNmae="footer__column" >
                 <h1>Snaps</h1>
                 <h4>For Photographers</h4>
                 <h4>Hire a Talent</h4>
@@ -32,6 +33,7 @@ function Footer() {
                     <a href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">
                         <img src={Pinterest} alt="Pinterest" />
                     </a>
+                </div>
                 </div>
                 <div className="footer__bottom--copyright">
                     <p>&copy; 2024 Snaps</p>
