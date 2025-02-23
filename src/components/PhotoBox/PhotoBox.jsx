@@ -5,7 +5,6 @@ import "./PhotoBox.scss";
 function PhotoBox({ photo, setGlobalCounter }) {
     const [count, setCount] = useState(0);
 
-    // ✅ Ensure photo exists before rendering
     if (!photo) {
         return <div>Loading...</div>;
     }

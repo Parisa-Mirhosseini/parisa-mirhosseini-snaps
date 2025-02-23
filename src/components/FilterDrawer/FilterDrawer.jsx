@@ -2,17 +2,18 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./FilterDrawer.scss";
 
-function FilterDrawer({ handleTagClick }) {
-  const [tags, setTags] = useState([]); // State to store tags from the API
+const API_KEY = "e664b7b3-dc90-458e-8c0d-5f76b986358f";
 
-  // Fetch tags from the API
+function FilterDrawer({ handleTagClick }) {
+  const [tags, setTags] = useState([]);
+
+
   useEffect(() => {
-    axios
-      .get("https://unit-3-project-c5faaab51857.herokuapp.com/tags", {
-        params: { api_key: "your_api_key_here" }, // Replace with your API key
-      })
-      .then((response) => setTags(response.data)) // Set the tags state with the API response
-      .catch((error) => console.error(error)); // Handle errors
+    axios.get("https://unit-3-project-c5faaab51857.herokuapp.com/tags", {
+      params: { API_KEY },
+    })
+      .then((response) => setTags(response.data))
+      .catch((error) => console.error(error));
   }, []);
 
   return (
@@ -21,7 +22,7 @@ function FilterDrawer({ handleTagClick }) {
       <div className="filter-container">
         {tags.map((tag) => (
           <button
-            key={tag} // Use the tag itself as the key
+            key={tag}
             className="filter-container__button"
             onClick={() => handleTagClick(tag)}
           >

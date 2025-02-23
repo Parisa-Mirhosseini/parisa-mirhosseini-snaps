@@ -9,8 +9,6 @@ import { useState, useEffect } from "react";
 import "./Home.scss";
 
 
-
-
 export default function Home() {
     const [drawerOpen, setDrawerOpen] = useState(false);
     const [photos, setPhotos] = useState(null);
@@ -45,8 +43,8 @@ export default function Home() {
                 <OurMission />
                 <div className="photo-list">
                     {photos.map((photo) => (
-                        <div >
-                            <Link key={photo.id} to={`/photo/${photo.id}`} style={{ textDecoration: "none" }}>
+                        <div key={photo.id}>
+                            <Link to={`/photo/${photo.id}`} style={{ textDecoration: "none" }}>
                                 <PhotoCard photo={photo} />
                             </Link>
                         </div>
