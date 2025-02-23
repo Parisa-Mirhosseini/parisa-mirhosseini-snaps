@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
-import "./CommentForm.scss";
+import "../CommentForm/CommentForm.scss";
+
+const API_KEY = "e664b7b3-dc90-458e-8c0d-5f76b986358f";
 
 function CommentForm({ photoId }) {
   const [name, setName] = useState("");
@@ -21,18 +23,20 @@ function CommentForm({ photoId }) {
         setComment("");
         alert("Comment submitted!");
       })
-      .catch((error) => console.error(error));
+      .catch((error) => console.error("Error submitting comment:", error));
   };
 
   return (
     <form className="comment-form" onSubmit={handleSubmit}>
       <input
         type="text"
+        name="name"
         placeholder="Your Name"
         value={name}
         onChange={(e) => setName(e.target.value)}
       />
       <textarea
+        name="comment"
         placeholder="Your Comment"
         value={comment}
         onChange={(e) => setComment(e.target.value)}

@@ -24,3 +24,9 @@ function PhotoCard({ photo, setGlobalCounter }) {
 }
 
 export default PhotoCard;
+
+
+
+{/* <Link to={`/photo/${photo.id}`}>
+{photo.photoDescription}
+</Link> */}

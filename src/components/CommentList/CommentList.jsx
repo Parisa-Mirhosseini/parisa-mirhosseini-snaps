@@ -1,6 +1,6 @@
 import "./CommentList.scss";
 
-function CommentList({ comments }) {
+function CommentList({ comments=[] }) {
   return (
     <div className="comment-list">
       <h3>Comments</h3>

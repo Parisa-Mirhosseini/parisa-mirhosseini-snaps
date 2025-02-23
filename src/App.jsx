@@ -1,9 +1,7 @@
-// BASE-URL "https://unit-3-project-c5faaab51857.herokuapp.com/"
-import { BrowserRouter, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.scss";
 import Home from "./pages/Home/Home";
-import PhotoPage from "./pages/PhotoPage/PhotoPage";
-
+import Photo from "./pages/Photo/Photo";
 
 // import { useState } from "react";
 // import PhotoCard from "./components/PhotoCard/PhotoCard";
@@ -19,12 +17,14 @@ import PhotoPage from "./pages/PhotoPage/PhotoPage";
 
 function App() {
     return (
-        <BrowserRouter>
+        <>
+        <Router>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/photo/:id" element={<PhotoPage />} />
+                <Route path="/photo/:id" element={<Photo />} />
             </Routes>
-        </BrowserRouter>
+        </Router>
+        </>
     );
 }
 
