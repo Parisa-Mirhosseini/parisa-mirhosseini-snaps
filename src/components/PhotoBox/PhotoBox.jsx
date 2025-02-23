@@ -14,16 +14,18 @@ function PhotoBox({ photo, setGlobalCounter }) {
             <div className="photo__box--content">
                 <img
                     className="photo__box--image"
-                    src={photo.imageUrl}
+                    src={photo.photo}
                     alt={photo.photoDescription}
                 />
-                <div className="photo__box--photographer">{photo.photographer}</div>
+
             </div>
             <div className="photo__box--tags">
                 {photo.tags?.map((tag) => (
                     <Tag tag={tag} key={tag} setCount={setGlobalCounter} />
                 ))}
+                <div className="photo__box--photographer">{photo.photographer}</div>
             </div>
+
         </div>
     );
 }

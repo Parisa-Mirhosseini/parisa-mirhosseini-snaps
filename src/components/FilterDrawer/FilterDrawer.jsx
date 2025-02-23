@@ -7,28 +7,30 @@ const API_KEY = "e664b7b3-dc90-458e-8c0d-5f76b986358f";
 function FilterDrawer({ handleTagClick }) {
   const [tags, setTags] = useState([]);
 
-
   useEffect(() => {
     axios.get("https://unit-3-project-c5faaab51857.herokuapp.com/tags", {
-      params: { API_KEY },
+      params: { api_key: API_KEY },
     })
-      .then((response) => setTags(response.data))
-      .catch((error) => console.error(error));
+      .then((response) => {
+        console.log("Tags API Response:", response.data);
+        setTags(response.data.tags || response.data);
+      })
+      .catch((error) => console.error("Error fetching tags:", error.response ? error.response.data : error.message));
   }, []);
 
   return (
     <div className="filter">
       <h3 className="filter-container">Filters</h3>
       <div className="filter-container">
-        {tags.map((tag) => (
-          <button
-            key={tag}
-            className="filter-container__button"
-            onClick={() => handleTagClick(tag)}
-          >
-            {tag}
-          </button>
-        ))}
+        {tags.length > 0 ? (
+          tags.map((tag) => (
+            <button key={tag} className="filter-container__button" onClick={() => handleTagClick(tag)}>
+              {tag}
+            </button>
+          ))
+        ) : (
+          <p>Loading tags...</p>
+        )}
       </div>
     </div>
   );

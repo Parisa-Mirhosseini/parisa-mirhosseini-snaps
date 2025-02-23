@@ -1,0 +1,48 @@
+@use "../../styles/partials/global.scss";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+@use "../../styles/partials/typography";
+
+
+
+
+.photo__page {
+
+    &-header{
+    display: flex;
+    justify-content: space-between;
+    gap: 6.5rem;
+    background-color: $pistachio;
+    padding-top: 24px;
+    padding-left: 16px;
+    padding-right: 16px;}
+
+    h1 {
+        font-family: "Newsreader";
+        font-size: 32px;
+        padding-top: 10px;
+        line-height: 32px;
+        font-weight: 400;
+
+        @include tablet {
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: 400;
+            padding-left: 16px;
+        }
+
+        @include desktop {
+            font-size: 40px;
+            line-height: 40px;
+            font-weight: 400;
+            padding-left: 16px;
+        }
+
+
+    }
+
+    
+
+
+
+}

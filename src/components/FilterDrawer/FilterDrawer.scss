@@ -20,6 +20,7 @@
     &__tags {
         background-color: $sage;
         padding: 8px;
+
     }
 
     &__button {
@@ -38,10 +39,9 @@
             color: $white;
         }
      
-    }}
+    }
+
 
 @include desktop{
     display: flex;
-    justify-content: flex-end;}
-
-}
+    justify-content: flex-end;}}}

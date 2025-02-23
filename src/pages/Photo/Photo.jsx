@@ -5,6 +5,8 @@ import Tag from "../../components/Tag/Tag";
 import CommentList from "../../components/commentList/commentList";
 import CommentForm from "../../components/CommentForm/CommentForm";
 import PhotoBox from "../../components/PhotoBox/PhotoBox";
+import "../Photo/Photo.scss"
+import Footer from "../../components/Footer/Footer"
 
 export default function Photo() {
 
@@ -50,20 +52,20 @@ export default function Photo() {
     if (!photo || !comments) {
         return <div>Loading...</div>;
     }
-
     return (
-        <div>
-            <h1>Snaps</h1>
-            <div>
-                <Link to="/">Home</Link>
-            </div>
+        <div className="photo__page">
+            <div className="photo__page-header">
+          <h1>Snaps</h1>
+            <Link to="/">Home</Link>
+          </div>
+          <div className="photo__page-box">
             {photo && <PhotoBox photo={photo} />}
-            <div> title:{photo.photoDescription}</div>;
-            <div> num comments:{comments.length}</div>;
+            <div>title: {photo.photoDescription}</div>
+            <div>num comments: {comments.length}</div>
             <Tag>{photo.photographer}</Tag>
             <CommentForm />
             <CommentList />
-            <footer />
+          </div>
+          <Footer />
         </div>
-    );
-}
+      );}

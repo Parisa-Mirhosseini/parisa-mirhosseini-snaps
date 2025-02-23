@@ -1,44 +1,39 @@
-// @use "../../styles/partials/global.scss";
-// @use "../../styles/partials/mixins" as *;
-// @use "../../styles/partials/variable" as *;
+@use "../../styles/partials/global.scss";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
 
-// .home {
-//     // &__content {
-//     //     display: flex;
-//     //     flex-direction: column;
-//     //     background-color: $pistachio;
-//     //     font-family: "Newsreader";
+.home {
 
 
-//     @include desktop {
-//         flex-direction: row-reverse;
-//         justify-content: flex-end;
-//         gap: 4rem;
-//     }
-// }
+    @include desktop {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        gap: 4rem;
+    }
+}
 
 
-// .drawer {
-//     display: none;
+.drawer {
+    display: none;
 
-//     @include desktop {
-//         width: 400px;
-//     }
+    @include desktop {
+        width: 400px;
+    }
 
-//     &--open {
-//         display: block;
-//     }
-// }
+    &--open {
+        display: block;
+    }
+}
 
-// .photo-list {
-//     display: flex;
-//     flex-wrap: wrap;
-//     gap: 1rem;
-//     padding-right: 16px;
-//     padding-left: 16px;
-//     background-color: $pistachio;
+.photo-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-right: 16px;
+    padding-left: 16px;
+    background-color: $pistachio;
 
-//     @include desktop {
-//         flex: 1;
-//     }
-// }
+    @include desktop {
+        flex: 1;
+    }
+}
