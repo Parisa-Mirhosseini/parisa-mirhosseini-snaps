@@ -5,41 +5,43 @@
 
 
 
-.filter-container {
+.filter{
+  
+&-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     background-color: $sage;
-font-family: "outfit";
-padding-left: 16px;
-padding-top: 25px;
-padding-bottom: 25px;
-
-
+    font-family: "outfit";
+    padding-left: 16px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 
     &__tags {
         background-color: $sage;
         padding: 8px;
-       
-
-
-
     }
 
     &__button {
         font-size: 18px;
         color: $forestgreen;
         background-color: $white;
-        border-radius: 8px;
-        padding-top:8px;
-        padding-bottom:8px;
-
-padding-right:12px;
-        padding-left:12px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-right: 12px;
+        padding-left: 12px;
+        border: 1px #1E6655;
+        border-radius: 10px;
 
         &:hover {
-            background-color:$forestgreen;
-            color:$white;
-          }
-    }
+            background-color: $forestgreen;
+            color: $white;
+        }
+     
+    }}
+
+@include desktop{
+    display: flex;
+    justify-content: flex-end;}
+
 }

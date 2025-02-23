@@ -3,11 +3,11 @@
 @use "/src/styles/partials/variable" as *;
 
 .app {
-    &__content {
-        display: flex;
-        flex-direction: column;
-        background-color: $pistachio;
-        font-family: "Newsreader";
+    // &__content {
+    //     display: flex;
+    //     flex-direction: column;
+    //     background-color: $pistachio;
+    //     font-family: "Newsreader";
 
 
         @include desktop {
@@ -16,7 +16,7 @@
             gap: 4rem;
         }
     }
-}
+
 
 .drawer {
     display: none;

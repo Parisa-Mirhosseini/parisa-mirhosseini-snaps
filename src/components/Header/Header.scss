@@ -10,31 +10,33 @@
     gap: 6.5rem;
     background-color: $pistachio;
     padding-top: 24px;
-    padding-bottom: 48px;
     padding-left: 16px;
     padding-right: 16px;
-
-
 
     &__filter {
         font-size: 18px;
         color: $forestgreen;
-        background-color: $white;
+        background-color: $pistachio;
         border: 2px solid $forestgreen;
         border-radius: 30px;
-        padding-top: 11px;
-        padding-bottom: 11px;
-        padding-right: 22px;
-        padding-left: 22px;
+        padding-top: 8px;
+        padding-bottom: 8px;
         width: 8rem;
+        display: flex;
+        justify-content: space-around;
+
+
+
         @include tablet {
             padding-right: 22px;
             padding-left: 22px;
+            width: 12rem;
         }
 
         @include desktop {
             padding-right: 22px;
             padding-left: 22px;
+            width: 12rem;
         }
 
 
@@ -43,11 +45,13 @@
             background-color: $forestgreen;
             color: $white;
             cursor: pointer;
-
-
         }
 
-        
+        &__filter--img {
+
+            height: 1rem;
+        }
+
 
     }
 

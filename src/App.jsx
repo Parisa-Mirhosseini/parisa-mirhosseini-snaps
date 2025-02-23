@@ -1,38 +1,63 @@
-import { useState } from "react";
-import Tag from "./components/Tag/Tag";
-import PhotoCard from "./components/PhotoCard/PhotoCard";
-import tags from "./data/tags.json";
-import photos from "./data/photos.json";
+// BASE-URL "https://unit-3-project-c5faaab51857.herokuapp.com/"
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import "./App.scss";
-import Header from "./components/Header/Header.jsx";
-import Footer from "./components/Footer/Footer.jsx";
-import FilterDrawer from "./components/FilterDrawer/FilterDrawer.jsx";
-import OurMission from "./components/OurMission/OurMission.jsx"
+import Home from "./pages/Home/Home";
+import PhotoPage from "./pages/PhotoPage/PhotoPage";
+
+
+// import { useState } from "react";
+// import PhotoCard from "./components/PhotoCard/PhotoCard";
+// import photos from "./data/photos.json";
+
+// import Header from "./components/Header/Header.jsx";
+// import Footer from "./components/Footer/Footer.jsx";
+// import FilterDrawer from "./components/FilterDrawer/FilterDrawer.jsx";
+// import OurMission from "./components/OurMission/OurMission.jsx";
+
+
+
 
 function App() {
-    const [selectedTag, setSelectedTag] = useState(photos);
-    const [DrawerOpen, setDrawerOpen] = useState(false);
-
-    const handleTagClick = (tag) => {
-        const filteredPhotos = photos.filter((photo) => photo.tags.includes(tag));
-        setSelectedTag(filteredPhotos);
-    } 
-
-    // const filteredPhotos = selectedTag ? photos.filter((photo) => photo.tags.includes(selectedTag)) : photos;
-
     return (
-        <div className="app">
-            <Header setDrawerOpen={setDrawerOpen} />
-            {DrawerOpen ? <FilterDrawer handleTagClick={handleTagClick} /> : ''}
-            <OurMission />
-            <div className="photo-list">
-                {selectedTag.map((photo) => <PhotoCard photo={photo} key={photo.id} />)}
-                
-            </div>
-
-            <Footer />
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/photo/:id" element={<PhotoPage />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 
 export default App;
+
+
+
+
+
+// function App() {
+//     const [selectedPhotos, setSelectedPhotos] = useState(photos);
+//     const [drawerOpen, setDrawerOpen] = useState(false);
+
+//     const handleTagClick = (tag) => {
+//         const filteredPhotos = photos.filter((photo) => photo.tags.includes(tag));
+//         setSelectedPhotos(filteredPhotos);
+//     };
+
+//     return (
+//         <div className="app">
+//             <Header setDrawerOpen={setDrawerOpen} />
+//             {drawerOpen && <FilterDrawer handleTagClick={handleTagClick} />}
+//             <OurMission />
+//             <div className="photo-list">
+//                 {selectedPhotos.map((photo) => (
+//                     <PhotoCard photo={photo} key={photo.id} />
+//                 ))}
+//             </div>
+//             <Footer />
+//         </div>
+//     );
+// }
+
+
+
+// export default App;
