@@ -3,8 +3,10 @@
 @use "../../styles/partials/variable" as *;
 
 .home {
-
-
+        display: flex;
+        flex-direction: column;
+        background-color: $pistachio;
+        font-family: "Newsreader";
     @include desktop {
         flex-direction: row-reverse;
         justify-content: flex-end;

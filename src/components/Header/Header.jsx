@@ -11,7 +11,7 @@ function Header({ setDrawerOpen }) {
         aria-label="Toggle filters"
       >
         Filters
-        <img className="header__filter--img" src={Filter} alt="Filter icon" />
+        <img className="header__filter--icon" src={Filter} alt="Filter icon" />
       </button>
     </header>
   );

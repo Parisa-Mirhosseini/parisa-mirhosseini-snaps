@@ -6,7 +6,7 @@ import OurMission from "../../components/OurMission/OurMission.jsx";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import "./Home.scss";
+import "../Home/Home.scss";
 
 
 

@@ -1,4 +1,8 @@
-@use "/src/styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+@use "../../styles/partials/typography";
+
 
 .label {
   font-size: 12px;
