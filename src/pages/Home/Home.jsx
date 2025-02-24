@@ -9,16 +9,22 @@ import { useState, useEffect } from "react";
 import "./Home.scss";
 
 
+
 export default function Home() {
     const [drawerOpen, setDrawerOpen] = useState(false);
-    const [photos, setPhotos] = useState(null);
-    const handleTagClick = (tag) => {
-        const filteredPhotos = photos.filter((photo) => photo.tags.includes(tag));
-        setSelectedPhotos(filteredPhotos);
-    };
+    const [photos, setPhotos] = useState([]);
+
+    const [filteresphotos, setFilteredPhotos] = useState([]);
+
+
     useEffect(() => {
         fetchPhotos();
     }, []);
+
+    useEffect(() => {
+        setFilteredPhotos(photos);
+    }, [photos]);
+
 
     async function fetchPhotos() {
         try {
@@ -31,6 +37,14 @@ export default function Home() {
         }
     }
 
+    const handleTagClick = (tag) => {
+
+        const filteredPhotos = photos.filter((photo) => photo.tags.includes(tag));
+        setFilteredPhotos(filteredPhotos);
+
+    };
+
+
     if (!photos) {
         return <div>Loading...</div>;
     }
@@ -42,7 +56,7 @@ export default function Home() {
                 {drawerOpen && <FilterDrawer handleTagClick={handleTagClick} />}
                 <OurMission />
                 <div className="photo-list">
-                    {photos.map((photo) => (
+                    {filteresphotos.map((photo) => (
                         <div key={photo.id}>
                             <Link to={`/photo/${photo.id}`} style={{ textDecoration: "none" }}>
                                 <PhotoCard photo={photo} />

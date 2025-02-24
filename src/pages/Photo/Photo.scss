@@ -8,14 +8,15 @@
 
 .photo__page {
 
-    &-header{
-    display: flex;
-    justify-content: space-between;
-    gap: 6.5rem;
-    background-color: $pistachio;
-    padding-top: 24px;
-    padding-left: 16px;
-    padding-right: 16px;}
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        gap: 6.5rem;
+        background-color: $pistachio;
+        padding-top: 24px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
 
     h1 {
         font-family: "Newsreader";
@@ -41,7 +42,15 @@
 
     }
 
-    
+    &-box {
+        background-color: $pistachio;
+        width: 100%;
+        padding-left: 22px;
+        padding-right: 22px;
+        justify-content: center;
+
+    }
+
 
 
 

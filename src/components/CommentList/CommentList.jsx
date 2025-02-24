@@ -1,7 +1,12 @@
 import "./CommentList.scss";
 
-function CommentList({ comments=[] }) {
+function CommentList({ comments }) {
+  if (!comments) {
+    return <div>Loading...</div>;
+}
   return (
+
+    
     <div className="comment-list">
       <h3>Comments</h3>
       {comments.map((comment) => (

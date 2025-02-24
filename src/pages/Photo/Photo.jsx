@@ -2,7 +2,6 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import Tag from "../../components/Tag/Tag";
-import CommentList from "../../components/commentList/commentList";
 import CommentForm from "../../components/CommentForm/CommentForm";
 import PhotoBox from "../../components/PhotoBox/PhotoBox";
 import "../Photo/Photo.scss"
@@ -11,16 +10,14 @@ import Footer from "../../components/Footer/Footer"
 export default function Photo() {
 
     const { id } = useParams();
+
     const [photo, setPhoto] = useState(null);
-    const [comments, setComments] = useState(null);
+
 
     useEffect(() => {
         fetchPhoto();
     }, []);
 
-    useEffect(() => {
-        fetchComments();
-    }, []);
 
 
     async function fetchPhoto() {
@@ -36,20 +33,8 @@ export default function Photo() {
         }
     }
 
-    async function fetchComments() {
-        try {
-            const response = await axios.get(
-                `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${id}/comments?api_key=e664b7b3-dc90-458e-8c0d-5f76b986358f`
-            );
-
-            setComments(response.data);
-
-        } catch (error) {
-            console.error("Error fetching photos:", error);
-        }
-    }
-
-    if (!photo || !comments) {
+    
+    if (!photo) {
         return <div>Loading...</div>;
     }
     return (
@@ -61,10 +46,10 @@ export default function Photo() {
           <div className="photo__page-box">
             {photo && <PhotoBox photo={photo} />}
             <div>title: {photo.photoDescription}</div>
-            <div>num comments: {comments.length}</div>
+            
             <Tag>{photo.photographer}</Tag>
-            <CommentForm />
-            <CommentList />
+            <CommentForm photoId={id}/>
+
           </div>
           <Footer />
         </div>

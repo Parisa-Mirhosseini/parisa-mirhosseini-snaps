@@ -12,7 +12,6 @@ function FilterDrawer({ handleTagClick }) {
       params: { api_key: API_KEY },
     })
       .then((response) => {
-        console.log("Tags API Response:", response.data);
         setTags(response.data.tags || response.data);
       })
       .catch((error) => console.error("Error fetching tags:", error.response ? error.response.data : error.message));
@@ -24,7 +23,11 @@ function FilterDrawer({ handleTagClick }) {
       <div className="filter-container">
         {tags.length > 0 ? (
           tags.map((tag) => (
-            <button key={tag} className="filter-container__button" onClick={() => handleTagClick(tag)}>
+            <button
+              key={tag}  // Use the tag itself as the key (assuming tags are unique strings)
+              className="filter-container__button"
+              onClick={() => handleTagClick(tag)}
+            >
               {tag}
             </button>
           ))
