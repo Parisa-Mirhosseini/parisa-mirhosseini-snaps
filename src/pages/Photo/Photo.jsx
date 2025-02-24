@@ -40,7 +40,7 @@ export default function Photo() {
     return (
         <div className="photo__page">
             <div className="photo__page-header">
-                <h1>Snaps</h1>
+                <h1 className="photo__page-logo">Snaps</h1>
                 <Link to="/">Home</Link>
             </div>
             <div className="photo__page-box">

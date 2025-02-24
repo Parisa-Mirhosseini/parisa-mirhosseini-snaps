@@ -4,7 +4,7 @@ import Filter from "../../assets/images/Filter.svg";
 function Header({ setDrawerOpen }) {
   return (
     <header className="header">
-      <h1>Snaps</h1>
+      <h1 className="header__logo">Snaps</h1>
       <button
         className="header__filter"
         onClick={() => setDrawerOpen((previousState) => !previousState)}

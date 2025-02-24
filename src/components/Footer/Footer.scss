@@ -23,8 +23,10 @@
 
     }
 
-    h1 {
+    &__logo {
         font-family: "Newsreader";
+        padding-left: 0;
+        margin-left: 0;
         padding-bottom: 24px;
         font-size: 32px;
         font-weight: 400;

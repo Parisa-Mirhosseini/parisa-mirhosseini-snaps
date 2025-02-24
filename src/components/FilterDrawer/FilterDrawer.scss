@@ -13,7 +13,11 @@
         gap: 10px;
         background-color: $sage;
         font-family: "outfit";
-        padding: 16px 0 25px 16px; // Ensure no extra padding on top
+        padding: 16px 0 25px 16px;
+
+        @include desktop {
+            justify-content: right;
+        }
 
         &__tags {
             background-color: $sage;
@@ -22,10 +26,12 @@
         }
 
         &__button {
+            font-weight: 400;
+            font-family: "outfit";
             font-size: 18px;
             color: $forestgreen;
             background-color: $white;
-            padding: 8px 12px; // Simplified padding
+            padding: 8px 12px;
             border: 1px solid $forestgreen;
             border-radius: 10px;
 
@@ -37,7 +43,7 @@
     }
 
     h3 {
-        margin: 0; // Fix potential white space
+        margin: 0;
         padding: 0;
     }
 }

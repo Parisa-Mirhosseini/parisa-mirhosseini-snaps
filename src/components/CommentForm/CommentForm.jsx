@@ -62,7 +62,7 @@ function CommentForm({ photoId }) {
   return (
     <>
       <form className="comment-form" onSubmit={handleSubmit}>
-        Name
+      Name
         <input className="comment-form__input"
           type="text"
           name="name"
@@ -70,14 +70,15 @@ function CommentForm({ photoId }) {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
+        
         Comment
-        <textarea
+        <textarea className="comment-form__textarea"
           name="comment"
           placeholder="Your Comment"
           value={comment}
           onChange={(e) => setComment(e.target.value)}
         />
-        <button type="submit">Submit</button>
+        <button className="comment-form__submit" type="submit">Submit</button>
       </form>
       <CommentList comments={comments} />
 

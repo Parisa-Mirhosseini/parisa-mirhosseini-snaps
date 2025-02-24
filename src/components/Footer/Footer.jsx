@@ -8,7 +8,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer__column">
-        <h1>Snaps</h1>
+        <h1 className="footer__logo">Snaps</h1>
         <h4>For Photographers</h4>
         <h4>Hire a Talent</h4>
         <h4 className="footer--inspiration">Inspiration</h4>

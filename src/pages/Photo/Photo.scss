@@ -16,10 +16,12 @@
         padding-right: 16px;
     }
 
-    h1 {
+    &-logo{
+        margin-left: 0;
         font-family: "Newsreader";
         font-size: 32px;
         padding-top: 10px;
+        padding-bottom: 3rem;
         line-height: 32px;
         font-weight: 400;
 
