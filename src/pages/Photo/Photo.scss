@@ -16,7 +16,7 @@
         padding-right: 16px;
     }
 
-    &-logo{
+    &-logo {
         margin-left: 0;
         font-family: "Newsreader";
         font-size: 32px;
@@ -51,6 +51,15 @@
 
     }
 
+    &-link {
+        font-family: 'Outfit';
+        font-size: 24px;
+        font-weight: 500;
+        text-decoration: none;
+        color: $forestgreen;
+        justify-content: flex-end;
+        margin-right: 0;
+    }
 
 
 

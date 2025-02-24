@@ -6,6 +6,7 @@ import CommentForm from "../../components/CommentForm/CommentForm";
 import PhotoBox from "../../components/PhotoBox/PhotoBox";
 import "../Photo/Photo.scss"
 import Footer from "../../components/Footer/Footer"
+import Arrow from "../../assets/images/Arrow.svg/"
 
 export default function Photo() {
 
@@ -41,7 +42,10 @@ export default function Photo() {
         <div className="photo__page">
             <div className="photo__page-header">
                 <h1 className="photo__page-logo">Snaps</h1>
-                <Link to="/">Home</Link>
+                <div>
+                    <img src={Arrow} />
+                <Link className="photo__page-link" to="/">Home</Link>
+                </div>
             </div>
             <div className="photo__page-box">
                 {photo && <PhotoBox photo={photo} />}

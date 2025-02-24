@@ -58,7 +58,7 @@ export default function Home() {
                 <div className="home__photos--list">
                     {filteresphotos.map((photo) => (
                         <div key={photo.id}>
-                            <Link to={`/photo/${photo.id}`} style={{ textDecoration: "none" }}>
+                            <Link to={`/photo/${photo.id}`} className="home__photos--link" style={{ textDecoration: "none" }}>
                                 <PhotoCard photo={photo} />
                             </Link>
                         </div>

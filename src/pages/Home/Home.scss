@@ -11,27 +11,34 @@
     font-family: "Newsreader";
     margin: 0;
 
+
     &__photos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
         width: max-width 100%;
-        padding-bottom: 12px;
 
     }
 
-    &__photos--list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Creates a responsive grid
-        gap: 1rem;
-        padding: 16px;
+    &__photos--link {
+        display: block;
+        text-decoration: none;
+        width: 100%;
+
+
+    }
+
+    .home__photos--list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
         background-color: $pistachio;
 
-
         @include desktop {
-            display: flex;
-            flex-wrap: wrap;
             gap: 4rem;
         }
     }
-
 
 }
 
