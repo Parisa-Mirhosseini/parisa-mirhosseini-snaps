@@ -9,6 +9,7 @@
 }
 
 .photo {
+    font-family: "outfit";
     width: 28.5rem;
     border: 1px solid $seagreen;
     border-radius: 10px;
@@ -19,7 +20,7 @@
     background: $sage;
     margin: 1rem;
     padding-bottom: 8px;
-    margin: 10px;
+    margin: 16px;
 
     @include tablet {
         width: 20rem;
@@ -67,18 +68,21 @@
 
     &__tags {
         font-family: "outfit";
-        display: inline-flex;
-        gap: 0.5rem;
-        padding-left: 8px;
+        display: flex;
+        gap: 8px;
+    padding: 8px 0px 16px 16px;
+
 
         @include tablet {
             font-size: 12px;
             font-weight: 300;
+            padding: 8px 12px;
         }
 
         @include desktop {
             font-size: 12px;
             font-weight: 300;
+            padding: 8px 12px;
         }
     }
 }

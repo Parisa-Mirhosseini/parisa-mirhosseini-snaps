@@ -28,13 +28,12 @@
         color: $forestgreen;
         background-color: $pistachio;
         border: 2px solid $forestgreen;
-        border-radius: 30px;
+        border-radius: 50px;
         padding: 16px;
         width: 100%;
 
         @include tablet {
-
-            width: min-content;
+            width: 50%;
         }
 
         &:hover {
@@ -43,22 +42,23 @@
 
         }
 
-        &--icon {
-            &:hover {
-                filter: brightness(0) invert(100%);
-            }
+
+        &:hover .header__filter--icon {
+            filter: brightness(0) invert(100%);
         }
 
+
         @include tablet {
-            padding-right: 22px;
-            padding-left: 22px;
-            width: 12rem;
+            padding: 11px 22px;
+            font-size: 14px;
+            height: 40px;
+            width: 120px;
         }
 
         @include desktop {
-            padding-right: 22px;
-            padding-left: 22px;
-            width: 12rem;
+            height: 35px;
+            width: 110px;
+            align-items: center;
         }
 
 

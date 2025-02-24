@@ -5,11 +5,15 @@
 
 
 .filter {
-    padding-top: 0; // Reset padding-top if not needed
+    padding-top: 0;
+    @include desktop {
+        height: 100%;
+      }
 
     &-container {
         display: flex;
         flex-wrap: wrap;
+        font-size: 18px;
         gap: 10px;
         background-color: $sage;
         font-family: "outfit";
@@ -23,6 +27,12 @@
             background-color: $sage;
             padding: 8px;
             border: 1px solid $forestgreen;
+            font-size: 12px;
+            @include tablet {
+                padding: 8px 12px;
+                border-radius: 8px;
+                font-size: 14px;
+              }
         }
 
         &__button {

@@ -43,7 +43,7 @@ export default function Photo() {
             <div className="photo__page-header">
                 <h1 className="photo__page-logo">Snaps</h1>
                 <div>
-                    <img src={Arrow} />
+                    <img className="photo__page-icon" src={Arrow} alt="Arrow"/>
                 <Link className="photo__page-link" to="/">Home</Link>
                 </div>
             </div>

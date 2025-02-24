@@ -9,6 +9,7 @@
     &-header {
         display: flex;
         justify-content: space-between;
+        align-items: baseline;
         gap: 6.5rem;
         background-color: $pistachio;
         padding-top: 24px;
@@ -48,19 +49,30 @@
         padding-left: 22px;
         padding-right: 22px;
         justify-content: center;
+        overflow: hidden;
 
     }
 
     &-link {
         font-family: 'Outfit';
-        font-size: 24px;
+        font-size: 32px;
         font-weight: 500;
         text-decoration: none;
         color: $forestgreen;
-        justify-content: flex-end;
         margin-right: 0;
+        margin-left: 0.5rem;
+
+        @include desktop {
+            font-size: 40px;
+            font-weight: 500;
+            margin-right: 0;
+        }
     }
 
+    // &-icon {
+    //     width: 100%;
+
+    // }
 
 
 }
