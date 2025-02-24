@@ -51,11 +51,11 @@ export default function Home() {
 
     return (
         <div className="home">
-            <div className="photos">
-                <Header setDrawerOpen={setDrawerOpen} />
+            <Header setDrawerOpen={setDrawerOpen} />
                 {drawerOpen && <FilterDrawer handleTagClick={handleTagClick} />}
                 <OurMission />
-                <div className="photo-list">
+            <div className="home__photos">
+                <div className="home__photos--list">
                     {filteresphotos.map((photo) => (
                         <div key={photo.id}>
                             <Link to={`/photo/${photo.id}`} style={{ textDecoration: "none" }}>
@@ -64,8 +64,8 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
-                <Footer />
             </div>
+            <Footer />
         </div>
     );
 }

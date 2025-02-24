@@ -33,24 +33,22 @@ export default function Photo() {
         }
     }
 
-    
+
     if (!photo) {
         return <div>Loading...</div>;
     }
     return (
         <div className="photo__page">
             <div className="photo__page-header">
-          <h1>Snaps</h1>
-            <Link to="/">Home</Link>
-          </div>
-          <div className="photo__page-box">
-            {photo && <PhotoBox photo={photo} />}
-            <div>title: {photo.photoDescription}</div>
-            
-            <Tag>{photo.photographer}</Tag>
-            <CommentForm photoId={id}/>
+                <h1>Snaps</h1>
+                <Link to="/">Home</Link>
+            </div>
+            <div className="photo__page-box">
+                {photo && <PhotoBox photo={photo} />}
+                <CommentForm photoId={id} />
 
-          </div>
-          <Footer />
+            </div>
+            <Footer />
         </div>
-      );}
+    );
+}

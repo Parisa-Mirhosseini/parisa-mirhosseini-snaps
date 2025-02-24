@@ -3,8 +3,18 @@
 @use "../../styles/partials/variable" as *;
 @use "../../styles/partials/typography";
 
-.photo__box {
-    width: 28.5rem;
+.photo{
+
+
+   
+    margin: 0;
+    &__page{
+margin: 0;
+    }
+
+
+&__box {
+    margin:0 auto;
     border: 1px solid $seagreen;
     border-radius: 10px;
     display: flex;
@@ -38,12 +48,6 @@
 
     &--photographer {
         font-family: "outfit";
-        position: absolute;
-        background-color: $sage;
-        border-top-left-radius: 10px;
-        padding: 0.5rem;
-        right: 0;
-        bottom: 0;
         font-size: 12px;
         font-weight: 300;
 
@@ -75,3 +79,9 @@
         }
     }
 }
+&__box--description{
+
+display: flex;
+flex-direction: column;
+
+}}

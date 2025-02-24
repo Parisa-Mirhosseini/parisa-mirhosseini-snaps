@@ -7,25 +7,25 @@ const API_KEY = "e664b7b3-dc90-458e-8c0d-5f76b986358f";
 function CommentForm({ photoId }) {
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
-    const [comments, setComments] = useState(null);
+  const [comments, setComments] = useState(null);
 
   useEffect(() => {
     fetchComments();
-}, []);
+  }, []);
 
 
   async function fetchComments() {
     try {
-        const response = await axios.get(
-            `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${photoId}/comments?api_key=e664b7b3-dc90-458e-8c0d-5f76b986358f`
-        );
+      const response = await axios.get(
+        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${photoId}/comments?api_key=e664b7b3-dc90-458e-8c0d-5f76b986358f`
+      );
 
-        setComments(response.data.sort((a, b) => b.timestamp - a.timestamp));
+      setComments(response.data.sort((a, b) => b.timestamp - a.timestamp));
 
     } catch (error) {
-        console.error("Error fetching photos:", error);
+      console.error("Error fetching photos:", error);
     }
-}
+  }
 
 
 
@@ -45,9 +45,9 @@ function CommentForm({ photoId }) {
         CommentInput,
         {
           headers: {
-          "Content-Type": "application/json",
-        },
-      }
+            "Content-Type": "application/json",
+          },
+        }
       )
       .then(() => {
         setName("");
@@ -57,30 +57,30 @@ function CommentForm({ photoId }) {
       })
       .catch((error) => console.error("Error submitting comment:", error));
   };
-  
+
 
   return (
     <>
-    <form className="comment-form" onSubmit={handleSubmit}>
-      Name
-      <input className="comment-form__input"
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      Comment
-      <textarea
-        name="comment"
-        placeholder="Your Comment"
-        value={comment}
-        onChange={(e) => setComment(e.target.value)}
-      />
-      <button type="submit">Submit</button>
-    </form>
-    <CommentList comments={comments}/>
-    
+      <form className="comment-form" onSubmit={handleSubmit}>
+        Name
+        <input className="comment-form__input"
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        Comment
+        <textarea
+          name="comment"
+          placeholder="Your Comment"
+          value={comment}
+          onChange={(e) => setComment(e.target.value)}
+        />
+        <button type="submit">Submit</button>
+      </form>
+      <CommentList comments={comments} />
+
     </>
   );
 }

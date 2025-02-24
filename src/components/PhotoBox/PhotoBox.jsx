@@ -19,11 +19,14 @@ function PhotoBox({ photo, setGlobalCounter }) {
                 />
 
             </div>
-            <div className="photo__box--tags">
-                {photo.tags?.map((tag) => (
-                    <Tag tag={tag} key={tag} setCount={setGlobalCounter} />
-                ))}
-                <div className="photo__box--photographer">{photo.photographer}</div>
+            <div className="photo__box--description">
+                <div className="photo__box--tags">
+                    {photo.tags?.map((tag) => (
+                        <Tag tag={tag} key={tag} setCount={setGlobalCounter} />
+                    ))}
+                    <div>{photo.likes} likes </div>
+                    <div className="photo__box--photographer">Photo by {photo.photographer}</div>
+                </div>
             </div>
 
         </div>

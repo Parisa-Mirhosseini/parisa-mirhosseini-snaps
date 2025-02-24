@@ -4,12 +4,12 @@
 @use "../../styles/partials/typography";
 
 
-// * {
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: border-box;
-//     font-family: 'Outfit';
-// }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+}
 
 .footer {
     background-color: $pistachio;
@@ -23,11 +23,11 @@
 
     }
 
-    &__column {
-        display: flex;
-        flex-direction: column;
+    // &__column {
+    //     display: flex;
+    //     flex-direction: column;
 
-    }
+    // }
 
     h1 {
         font-family: "Newsreader";
@@ -65,19 +65,17 @@
 
 
     &__bottom--socials {
-        display: flex;
-        justify-content: flex-start;
+        display: inline-flex;
         gap: 20px;
-        align-items: center;
         padding-top: 20px;
         padding-bottom: 10px;
 
     }
 
     &__bottom--copyright {
-        display: flex;
-        justify-content: space-between;
-        padding-right: 50px;
+        display: inline-flex;
+        gap: 20px;
+        padding-right: 20px;
         font-family: 'Outfit';
         font-size: 10px;
         line-height: 12px;

@@ -4,16 +4,21 @@
 @use "../../styles/partials/typography";
 
 
+* {
+    margin: 0 auto;
+}
+
 .photo {
     width: 28.5rem;
     border: 1px solid $seagreen;
     border-radius: 10px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 1rem;
     background: $sage;
     margin: 1rem;
     padding-bottom: 8px;
+    margin:10px;
 
     @include tablet {
         width: 20rem;
@@ -23,8 +28,6 @@
         width: 26.5rem;
     }
 
-
-
     &__content {
         position: relative;
         display: flex;
@@ -32,7 +35,9 @@
     }
 
     &__image {
-        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
@@ -61,7 +66,7 @@
 
     &__tags {
         font-family: "outfit";
-        display: flex;
+        display: inline-flex;
         gap: 0.5rem;
         padding-left: 8px;
 

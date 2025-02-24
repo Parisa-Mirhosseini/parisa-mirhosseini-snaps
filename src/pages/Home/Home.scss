@@ -1,17 +1,39 @@
-@use "../../styles/partials/global.scss";
+@use "../../styles/partials/global" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variable" as *;
+@use "../../styles/partials/typography";
 
-.home {
-        display: flex;
-        flex-direction: column;
-        background-color: $pistachio;
-        font-family: "Newsreader";
-    @include desktop {
-        flex-direction: row-reverse;
-        justify-content: flex-end;
-        gap: 4rem;
+* {
+    margin: 0 auto;
+}
+
+.home div {
+    background-color: $pistachio;
+    font-family: "Newsreader";
+    margin: 0;
+
+    &__photos {
+        width: max-width 100%;
+        padding-bottom: 12px;
+
     }
+
+    &__photos--list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Creates a responsive grid
+        gap: 1rem;
+        padding: 16px;
+        background-color: $pistachio;
+
+
+        @include desktop {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4rem;
+        }
+    }
+
+
 }
 
 
@@ -24,18 +46,5 @@
 
     &--open {
         display: block;
-    }
-}
-
-.photo-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding-right: 16px;
-    padding-left: 16px;
-    background-color: $pistachio;
-
-    @include desktop {
-        flex: 1;
     }
 }

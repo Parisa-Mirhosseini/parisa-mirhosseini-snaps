@@ -12,6 +12,11 @@
     padding-top: 24px;
     padding-left: 16px;
     padding-right: 16px;
+    margin: 0;
+
+    @include desktop {
+        margin: 0;
+    }
 
     &__filter {
         display: flex;
@@ -127,6 +132,7 @@ h5 {
 
 
 h2 {
+    margin:0;
     color: $black;
     font-family: "Newsreader";
     font-size: 26px;
