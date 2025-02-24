@@ -3,85 +3,87 @@
 @use "../../styles/partials/variable" as *;
 @use "../../styles/partials/typography";
 
-.photo{
+.photo {
 
 
-   
-    margin: 0;
-    &__page{
-margin: 0;
+
+    &__page {
+        margin: 0;
     }
 
 
-&__box {
-    margin:0 auto;
-    border: 1px solid $seagreen;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background: $sage;
-    margin: 1rem;
-    padding-bottom: 8px;
-
-    @include tablet {
-        width: 20rem;
-    }
-
-    @include desktop {
-        width: 26.5rem;
-    }
-
-
-
-    &--content {
-        position: relative;
+    &__box {
+        margin: 0 auto;
+        border: 1px solid $seagreen;
+        border-radius: 10px;
         display: flex;
-        overflow: hidden;
-    }
-
-    &--image {
-        width: 100%;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-    }
-
-    &--photographer {
-        font-family: "outfit";
-        font-size: 12px;
-        font-weight: 300;
+        flex-direction: column;
+        gap: 1rem;
+        background: $sage;
+        padding-bottom: 8px;
 
         @include tablet {
-            font-size: 12px;
-            font-weight: 400;
+            width: 100%;
         }
 
         @include desktop {
-            font-size: 18px;
+            width: 100%;
+            overflow: hidden;
+
+        }
+
+
+
+        &--content {
+            position: relative;
+            display: flex;
+            overflow: hidden;
+        }
+
+        &--image {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        &--photographer {
+            font-family: "outfit";
+            font-size: 12px;
             font-weight: 300;
+
+            @include tablet {
+                font-size: 12px;
+                font-weight: 400;
+            }
+
+            @include desktop {
+                font-size: 18px;
+                font-weight: 300;
+            }
+        }
+
+        &--tags {
+            font-family: "outfit";
+            display: flex;
+            gap: 0.5rem;
+            padding-left: 8px;
+
+            @include tablet {
+                font-size: 12px;
+                font-weight: 300;
+            }
+
+            @include desktop {
+                font-size: 12px;
+                font-weight: 300;
+            }
         }
     }
 
-    &--tags {
-        font-family: "outfit";
+    &__box--description {
+
         display: flex;
-        gap: 0.5rem;
-        padding-left: 8px;
+        flex-direction: column;
 
-        @include tablet {
-            font-size: 12px;
-            font-weight: 300;
-        }
-
-        @include desktop {
-            font-size: 12px;
-            font-weight: 300;
-        }
     }
 }
-&__box--description{
-
-display: flex;
-flex-direction: column;
-
-}}

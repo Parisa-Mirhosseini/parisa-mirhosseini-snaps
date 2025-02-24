@@ -46,7 +46,6 @@ export default function Photo() {
             <div className="photo__page-box">
                 {photo && <PhotoBox photo={photo} />}
                 <CommentForm photoId={id} />
-
             </div>
             <Footer />
         </div>

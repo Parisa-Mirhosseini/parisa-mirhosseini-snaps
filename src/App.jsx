@@ -7,12 +7,12 @@ import Photo from "./pages/Photo/Photo";
 function App() {
     return (
         <>
-        <Router>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/photo/:id" element={<Photo />} />
-            </Routes>
-        </Router>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/photo/:id" element={<Photo />} />
+                </Routes>
+            </Router>
         </>
     );
 }

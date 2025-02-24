@@ -19,12 +19,12 @@
     cursor: pointer;
 
     &:hover {
-      background-color: green;
+      background-color: $forestgreen;
     }
   }
 
   &--selected {
-    background-color: darkgreen;
-    color: whitesmoke;
+    background-color: $forestgreen;
+    color: $white;
   }
 }

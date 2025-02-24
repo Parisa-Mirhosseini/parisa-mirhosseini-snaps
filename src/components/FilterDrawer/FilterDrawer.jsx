@@ -24,7 +24,7 @@ function FilterDrawer({ handleTagClick }) {
         {tags.length > 0 ? (
           tags.map((tag) => (
             <button
-              key={tag}  // Use the tag itself as the key (assuming tags are unique strings)
+              key={tag} 
               className="filter-container__button"
               onClick={() => handleTagClick(tag)}
             >

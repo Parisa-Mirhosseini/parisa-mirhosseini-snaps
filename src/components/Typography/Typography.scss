@@ -8,9 +8,9 @@
   font-size: 12px;
   line-height: 15px;
 
-  
-    @include desktop {
-      font-size: 12px;
-      font-weight: 400;
+
+  @include desktop {
+    font-size: 12px;
+    font-weight: 400;
   }
-  }
+}

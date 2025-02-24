@@ -2,3 +2,50 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variable" as *;
 @use "../../styles/partials/typography";
+
+
+
+
+.comment {
+
+    font-weight: 400;
+    font-family: "outfit";
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    h3 {
+        margin: 0;
+        font-weight: 400;
+        font-family: "outfit";
+        padding-top: 16px;
+        padding-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+    }
+
+    &--list {
+        font-weight: 400;
+        font-family: "outfit";
+        margin: 0;
+        border-top: 1px solid $seagreen;
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+      
+
+    }
+
+    &--name {
+        font-weight: 400;
+        font-family: "outfit";
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        color: $forestgreen;
+        padding-bottom: 16px;
+    }
+}
