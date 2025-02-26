@@ -10,7 +10,6 @@
 
 .photo {
     font-family: "outfit";
-    width: 28.5rem;
     border: 1px solid $seagreen;
     border-radius: 10px;
     display: flex;
@@ -21,14 +20,10 @@
     margin: 1rem;
     padding-bottom: 8px;
     margin: 16px;
+    width: 100%;
 
-    @include tablet {
-        width: 20rem;
-    }
 
-    @include desktop {
-        width: 26.5rem;
-    }
+
 
     &__content {
         position: relative;
@@ -70,7 +65,7 @@
         font-family: "outfit";
         display: flex;
         gap: 8px;
-    padding: 8px 0px 16px 16px;
+        padding: 8px 0px 16px 16px;
 
 
         @include tablet {

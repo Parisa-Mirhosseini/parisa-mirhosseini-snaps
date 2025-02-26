@@ -7,24 +7,45 @@
     margin: 0 auto;
 }
 
-.home div {
+.home {
     font-family: "Newsreader";
     margin: 0;
 
 
+&__contents{
+
+    display: flex;
+    flex-direction: column;
+    @include desktop{
+
+    flex-direction: row-reverse;
+    ///fix the width
+    /// height same height as parents photo height
+    /// padding
+    /// 
+    }
+}
     &__photos {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         width: max-width 100%;
 
+
     }
 
     &__photos--link {
-        display: block;
+        display: inline-block;
         text-decoration: none;
         width: 100%;
 
+        @include tablet {
+            width: 45%;
+        }
+
+        @include desktop {
+            width: 31%;
+        }
 
     }
 
@@ -34,10 +55,11 @@
         justify-content: center;
         gap: 2rem;
         background-color: $pistachio;
+        padding: 16px;
 
-        @include desktop {
-            gap: 4rem;
-        }
+        // @include desktop {
+        //     gap: ;
+        // }
     }
 
 }

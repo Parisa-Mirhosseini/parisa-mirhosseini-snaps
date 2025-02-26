@@ -52,20 +52,23 @@ export default function Home() {
     return (
         <div className="home">
             <Header setDrawerOpen={setDrawerOpen} />
+            <div className="home__contents">
                 {drawerOpen && <FilterDrawer handleTagClick={handleTagClick} />}
-                <OurMission />
-            <div className="home__photos">
-                <div className="home__photos--list">
-                    {filteresphotos.map((photo) => (
-                        <div key={photo.id}>
-                            <Link to={`/photo/${photo.id}`} className="home__photos--link" style={{ textDecoration: "none" }}>
-                                <PhotoCard photo={photo} />
-                            </Link>
+                <div className="home__mission-photos">
+                    <OurMission />
+                    <div className="home__photos">
+                        <div className="home__photos--list">
+                            {filteresphotos.map((photo) => (
+                                <Link key={photo.id} to={`/photo/${photo.id}`} className="home__photos--link" style={{ textDecoration: "none" }}>
+                                    <PhotoCard photo={photo} />
+                                </Link>
+                            ))}
                         </div>
-                    ))}
+                    </div>
                 </div>
             </div>
             <Footer />
+
         </div>
     );
 }
