@@ -28,20 +28,30 @@ function PhotoBox({ photo, setGlobalCounter }) {
                         <Tag tag={tag} key={tag} setCount={setGlobalCounter} />
 
                     ))}
+                </div>
+                <div className="photo__card__text">
+                    <div className="photo__card__text-info">
+                        <div className="photo__card__text-info-likes">
+                            <img src={LikeOutline} alt="Like_Outline" />
+                            <div className="photo__card__text-info-likes-count">
+                                <p>
+                                    {photo.likes}
+                                    <span>likes</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="photo__card__text-info-photographer">
+                            <p>Photo by {photo.photographer}</p>
+                        </div>
                     </div>
-                    <div className="photo__box--like">
-                    <img src={LikeOutline} alt="Like_Outline" />
-                    <p>{photo.likes} likes </p>
+                    <div className="photo__card__text-date">
+                        <p>{formattedDate}</p>
                     </div>
-                    <div>
-                    <div className="photo__box__text-date">
-                <p>{formattedDate}</p>
-            </div>
-                    <div className="photo__box--photographer">Photo by {photo.photographer}</div>
                 </div>
             </div>
-           
         </div>
+
+
     );
 }
 

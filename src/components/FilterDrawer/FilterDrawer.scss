@@ -9,6 +9,8 @@
 
     @include desktop {
         height: 100%;
+        width: 1000%;
+
 
     }
 
@@ -23,7 +25,11 @@
         padding: 16px 0 25px 16px;
 
         @include desktop {
-            justify-content: right;
+            justify-content: left;
+            padding: 32px;
+            width: 100%;
+
+
         }
 
         &__tags {
@@ -57,9 +63,14 @@
         }
     }
 
-    h3 {padding-bottom: 0;
+    h3 {
+        padding-bottom: 0;
         padding-left: 16px;
         margin: 0;
+        @include desktop {
+            padding-left: 32px;
+        }
+
 
     }
 }

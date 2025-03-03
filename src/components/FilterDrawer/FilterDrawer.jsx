@@ -2,15 +2,13 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./FilterDrawer.scss";
 
-const API_KEY = "e664b7b3-dc90-458e-8c0d-5f76b986358f";
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 function FilterDrawer({ handleTagClick }) {
   const [tags, setTags] = useState([]);
 
   useEffect(() => {
-    axios.get("https://unit-3-project-c5faaab51857.herokuapp.com/tags", {
-      params: { api_key: API_KEY },
-    })
+    axios.get(`${BASE_URL}tags`)
       .then((response) => {
         setTags(response.data.tags || response.data);
       })

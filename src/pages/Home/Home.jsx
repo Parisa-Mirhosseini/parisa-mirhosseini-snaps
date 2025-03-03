@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "../Home/Home.scss";
 
-
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 export default function Home() {
     const [drawerOpen, setDrawerOpen] = useState(false);
@@ -29,7 +29,7 @@ export default function Home() {
     async function fetchPhotos() {
         try {
             const response = await axios.get(
-                "https://unit-3-project-c5faaab51857.herokuapp.com/photos?api_key=e664b7b3-dc90-458e-8c0d-5f76b986358f"
+                `${BASE_URL}photos`
             );
             setPhotos(response.data);
         } catch (error) {

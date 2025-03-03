@@ -9,7 +9,9 @@ function CommentForm({ photoId }) {
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState(null);
 
+
   const BASE_URL = import.meta.env.VITE_API_URL;
+
 
   useEffect(() => {
     fetchComments();
@@ -19,7 +21,7 @@ function CommentForm({ photoId }) {
   async function fetchComments() {
     try {
       const response = await axios.get(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${photoId}/comments`
+        `${BASE_URL}photos/${photoId}/comments`
       );
 
       setComments(response.data.sort((a, b) => b.timestamp - a.timestamp));
@@ -43,7 +45,7 @@ function CommentForm({ photoId }) {
 
     axios
       .post(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${photoId}/`,
+        `${BASE_URL}photos/${photoId}/comments`,
         CommentInput,
         {
           headers: {

@@ -9,12 +9,20 @@ function Footer() {
     <footer className="footer">
       <div className="footer__column">
         <h1 className="footer__logo">Snaps</h1>
-        <h4>For Photographers</h4>
-        <h4>Hire a Talent</h4>
-        <h4 className="footer--inspiration">Inspiration</h4>
-        <h4>About</h4>
-        <h4>Careers</h4>
-        <h4>Support</h4>
+        <div className="footer__column--gereral--three">
+        <div className="footer__column--general">
+          <div className="footer__column--general-one">
+            <h4>For Photographers</h4>
+            <h4>Hire a Talent</h4>
+            <h4 className="footer--inspiration">Inspiration</h4>
+          </div>
+          <div className="footer__column--general--two">
+            <h4>About</h4>
+            <h4>Careers</h4>
+            <h4>Support</h4>
+          </div>
+        </div>
+
         <div className="footer__bottom">
           <div className="footer__bottom--socials">
             <a
@@ -51,13 +59,15 @@ function Footer() {
             </a>
           </div>
         </div>
+        </div>
+        </div>
         <div className="footer__bottom--copyright">
           <p>&copy; 2024 Snaps</p>
           <p>.Terms</p>
           <p>Privacy</p>
           <p>Cookies</p>
         </div>
-      </div>
+      
     </footer>
   );
 }

@@ -2,6 +2,9 @@ import { useState } from "react";
 import Tag from "../Tag/Tag";
 import "./PhotoCard.scss";
 
+
+const BASE_URL = import.meta.env.VITE_API_URL;
+
 function PhotoCard({ photo, setGlobalCounter }) {
 
 
