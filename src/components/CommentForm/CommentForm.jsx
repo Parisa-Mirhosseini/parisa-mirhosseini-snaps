@@ -34,38 +34,45 @@ function CommentForm({ photoId }) {
 
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!name || !comment) return alert("Please fill out all fields.");
 
-    const CommentInput = {
-      name: name,
-      comment: comment,
-    }
+    const newComment = {
+      name,
+      comment,
+      timestamp: Date.now(),
+    };
 
-    axios
-      .post(
+
+    setComments((prevComments) => [newComment, ...prevComments]);
+
+    try {
+      const response = await axios.post(
         `${BASE_URL}photos/${photoId}/comments`,
-        CommentInput,
+        newComment,
         {
-          headers: {
-            "Content-Type": "application/json",
-          },
+          headers: { "Content-Type": "application/json" },
         }
-      )
-      .then(() => {
-        setName("");
-        setComment("");
-        setComments([...comments]);
-        alert("Comment submitted!");
-      })
-      .catch((error) => console.error("Error submitting comment:", error));
+      );
+
+
+      setComments((prevComments) =>
+        prevComments.map((c) =>
+          c.timestamp === newComment.timestamp ? response.data : c
+        )
+      );
+    } catch (error) {
+      console.error("Error submitting comment:", error);
+      alert("Failed to submit comment.");
+    }
   };
 
 
   return (
     <>
       <form className="comment-form" onSubmit={handleSubmit}>
+        
         Name
         <input className="comment-form__input"
           type="text"

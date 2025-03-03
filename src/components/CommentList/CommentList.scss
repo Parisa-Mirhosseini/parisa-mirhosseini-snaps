@@ -15,6 +15,8 @@
     flex-direction: column;
     justify-content: flex-start;
 
+   
+
     h3 {
         margin: 0;
         font-weight: 400;
@@ -35,17 +37,34 @@
         padding-top: 16px;
         padding-bottom: 16px;
 
-      
+
 
     }
 
-    &--name {
-        font-weight: 400;
-        font-family: "outfit";
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        &--name {
+            font-weight: 400;
+            font-family: "outfit";
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            color: $forestgreen;
+            padding-bottom: 16px;
+        }
+    }
+
+
+
+    .comment--date {
+        font-family: "Outfit";
+        font-size: 10px;
         color: $forestgreen;
-        padding-bottom: 16px;
-    }
-}
+     flex-direction: row;
+        justify-content: right;
+
+        @include tablet {
+            font-size: 12px;
+        }
+
+        @include desktop {
+            font-size: 14px;
+        }}
