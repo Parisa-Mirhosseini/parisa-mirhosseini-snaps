@@ -3,7 +3,9 @@
 @use "../../styles/partials/variable" as *;
 @use "../../styles/partials/typography";
 
-
+* {
+  font-family: "Outfit";
+}
 
 .tag {
   background-color: $white;
@@ -13,6 +15,9 @@
   padding-top: 8px;
   padding: 8px;
   font-family: "outfit";
+  @include desktop{
+    font-size: 20px;
+  }
 
 
   &--clickable {

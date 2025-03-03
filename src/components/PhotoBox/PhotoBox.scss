@@ -107,13 +107,13 @@
             @include tablet {
                 padding: 8px 12px;
                 border-radius: 8px;
-                font-size: 14px;
+                font-size: 20px;
             }
 
             @include desktop {
                 padding: 8px 12px;
                 border-radius: 8px;
-                font-size: 14px;
+                font-size: 20px;
             }
 
         }
@@ -156,7 +156,14 @@
         margin-left: 0;
 
         @include tablet {
-            font-size: 16px;
+            font-size: 20px;
+        }
+
+        @include desktop {
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+           
         }
 
         &-info {
@@ -168,6 +175,10 @@
             margin-right: 0;
             margin-left: 0;
             justify-content: left;
+            @include desktop{
+
+                padding-top: 20px;
+            }
 
             &-likes {
                 background-color: $sage;

@@ -15,14 +15,16 @@
 
         display: flex;
         flex-direction: column;
+        padding-right: 16px;
+        width: 100%;
 
         @include desktop {
 
             flex-direction: row-reverse;
-            ///fix the width
-            /// height same height as parents photo height
-            /// padding
-            /// 
+            width: 100%;
+            height: 100%;
+            margin-right: 32px;
+
         }
     }
 
@@ -56,7 +58,7 @@
         justify-content: center;
         background-color: $pistachio;
         padding-left: 16px;
-        
+
         @include desktop {
             padding-right: 22px;
 

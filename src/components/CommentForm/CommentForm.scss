@@ -6,83 +6,90 @@
 
 
 
-.comment-form {
-  font-weight: 400;
-  font-family: "outfit";
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 16px;
-  margin: 0;
-  width: 100%;
- 
+.comment {
 
-
-  &__input {
-    width: 100%;
-    margin-bottom: 2rem;
-    margin-top: 0.5rem;
-    height: 2rem;
-    border-color: $seagreen;
-    border-radius: 8px;
-    padding-left: 8px;
-    padding-right: 8px;
-
-    @include tablet {
-      padding-left: 16px;
-      padding-right: 16px;
-
-    }
-
-    @include desktop {
-
-      padding-left: 16px;
-      padding-right: 16px;
-    }
-
-    &:hover {
-      border-color: $forestgreen;
-
-    }
-  }
-
-  &__textarea {
-    width: 100%;
-    margin-bottom: 2rem;
-    margin-top: 0.5rem;
-    height: 4rem;
-    border-color: $seagreen;
-    border-radius: 8px;
-    padding-left: 8px;
-    padding-right: 8px;
-
-    @include tablet {
-      padding-left: 16px;
-      padding-right: 16px;
-
-    }
-
-    @include desktop {
-
-      padding-left: 16px;
-      padding-right: 16px;
-    }
-
-    &:hover {
-      border-color: $forestgreen;
-
-    }
-  }
-
-  &__submit {
-    margin-right: 0;
-    border-radius: 8px;
-    padding-left: 8px;
-    padding-right: 8px;
+  
+  &-form {
     font-weight: 400;
     font-family: "outfit";
-    color: $white;
-    background-color: $forestgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 16px;
+    margin: 0;
+    width: 100%;
 
+
+
+
+
+
+    &__input {
+      width: 100%;
+      margin-bottom: 2rem;
+      margin-top: 0.5rem;
+      height: 2rem;
+      border-color: $seagreen;
+      border-radius: 8px;
+      padding-left: 8px;
+      padding-right: 8px;
+
+      @include tablet {
+        padding-left: 16px;
+        padding-right: 16px;
+
+      }
+
+      @include desktop {
+
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      &:hover {
+        border-color: $forestgreen;
+
+      }
+    }
+
+    &__textarea {
+      width: 100%;
+      margin-bottom: 2rem;
+      margin-top: 0.5rem;
+      height: 4rem;
+      border-color: $seagreen;
+      border-radius: 8px;
+      padding-left: 8px;
+      padding-right: 8px;
+
+      @include tablet {
+        padding-left: 16px;
+        padding-right: 16px;
+
+      }
+
+      @include desktop {
+
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      &:hover {
+        border-color: $forestgreen;
+
+      }
+    }
+
+    &__submit {
+      margin-right: 0;
+      border-radius: 8px;
+      padding-left: 8px;
+      padding-right: 8px;
+      font-weight: 400;
+      font-family: "outfit";
+      color: $white;
+      background-color: $forestgreen;
+
+    }
   }
 }
