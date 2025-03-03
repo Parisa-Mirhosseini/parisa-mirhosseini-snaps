@@ -12,19 +12,21 @@
     margin: 0;
 
 
-&__contents{
+    &__contents {
 
-    display: flex;
-    flex-direction: column;
-    @include desktop{
+        display: flex;
+        flex-direction: column;
 
-    flex-direction: row-reverse;
-    ///fix the width
-    /// height same height as parents photo height
-    /// padding
-    /// 
+        @include desktop {
+
+            flex-direction: row-reverse;
+            ///fix the width
+            /// height same height as parents photo height
+            /// padding
+            /// 
+        }
     }
-}
+
     &__photos {
         display: flex;
         flex-wrap: wrap;

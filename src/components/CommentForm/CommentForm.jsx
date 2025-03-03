@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "../CommentForm/CommentForm.scss";
 import CommentList from "../CommentList/CommentList"
-const API_KEY = "e664b7b3-dc90-458e-8c0d-5f76b986358f";
+
 
 function CommentForm({ photoId }) {
   const [name, setName] = useState("");
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState(null);
+
+  const BASE_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     fetchComments();
@@ -17,7 +19,7 @@ function CommentForm({ photoId }) {
   async function fetchComments() {
     try {
       const response = await axios.get(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${photoId}/comments?api_key=e664b7b3-dc90-458e-8c0d-5f76b986358f`
+        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${photoId}/comments`
       );
 
       setComments(response.data.sort((a, b) => b.timestamp - a.timestamp));
@@ -41,7 +43,7 @@ function CommentForm({ photoId }) {
 
     axios
       .post(
-        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${photoId}/comments?api_key=e664b7b3-dc90-458e-8c0d-5f76b986358f`,
+        `https://unit-3-project-c5faaab51857.herokuapp.com/photos/${photoId}/`,
         CommentInput,
         {
           headers: {
@@ -62,7 +64,7 @@ function CommentForm({ photoId }) {
   return (
     <>
       <form className="comment-form" onSubmit={handleSubmit}>
-      Name
+        Name
         <input className="comment-form__input"
           type="text"
           name="name"
@@ -70,7 +72,7 @@ function CommentForm({ photoId }) {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        
+
         Comment
         <textarea className="comment-form__textarea"
           name="comment"
